@@ -69,7 +69,6 @@ public class JsonTest {
         User user = users.get(0);
 
         Map<String, Object> requestBody = Main.getClickRequestBody(user, 24);
-        System.out.println(json);
     }
 
 
