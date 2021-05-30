@@ -20,19 +20,6 @@ import java.util.Map;
 
 
 public class JsonTest {
-    public final String json = "{\n" +
-            "    \"last_update_day\": 28,\n" +
-            "    \"data\": [\n" +
-            "        {\n" +
-            "            \"name\": \"Nick\",\n" +
-            "            \"id\": \"1421191634\",\n" +
-            "            \"url\": \"http://yiban.sust.edu.cn/v4/public/index.php?key=m53QXuGNaHDHsrrf//utmo27Xm_EnsQS7aVIbWNr0xKAvwYeYk54AizzNJDKtjYFgIx6ZoAvTsuROwIYdKCDDayyIo3YuslFei4FAnvvIVIOBI9kGY/UmFPwntPSFinU5SANbOQnV8JVJJryH7HbMQaraKCy4ivF4inCYoFeaM0=\",\n" +
-            "            \"location\": \"陕西省西安市 未央区 111县道 111县 靠近北城驾校 + &\",\n" +
-            "            \"morning_check\": true,\n" +
-            "            \"noon_check\": true\n" +
-            "        }\n" +
-            "    ]\n" +
-            "}";
 
     @Test
     public void Test1(){
