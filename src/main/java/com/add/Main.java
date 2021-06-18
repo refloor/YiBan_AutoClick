@@ -15,6 +15,7 @@ import com.add.domain.ExceptionStatus;
 import com.add.domain.User;
 import com.add.exception.BaseException;
 import com.add.util.EmailUtil;
+import com.add.util.IdUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -147,6 +148,7 @@ public class Main {
                     .header(Header.CONNECTION, "keep-alive", true)
                     .header("X-Requested-With", "XMLHttpRequest", true)
                     .form(requestBodyMap)
+                    //.header(Header.COOKIE,"client=android")
                     .header(Header.COOKIE, "PHPSESSID" + "=" + cookie + ";" + "client=android")
                     .timeout(2000);
 
@@ -211,7 +213,11 @@ public class Main {
     public static String getCookie(User user) {
         try {
             String url = user.getUrl();
-            HttpResponse resp = HttpRequest.post(url).execute();
+            HttpResponse resp = HttpRequest
+                    .post(url)
+                    //.header(Header.COOKIE, "")
+                    .disableCookie()
+                    .execute();
             String cookie = resp.getCookieStr().split(";")[0].split("=")[1];
             return cookie;
         } catch (Exception e) {
