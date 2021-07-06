@@ -6,13 +6,17 @@
 
 1. 易班晨午检自动打卡。
 2. 自定义配置用户（无需账号密码），支持多个用户打卡
-3. 打卡失败/打卡成功都会发送邮箱
+3. 配置问题/打卡失败/打卡成功都会发送邮箱(前提是邮箱不能填错)
 4. 记录日志到click.log，方便排查问题
+5. 支持用Idea打成jar包后命令行直接运行(可以部署在服务器上定时任务)
+
+# 如何导入到Idea
+
 
 # 使用步骤
 
 1. 配置src\main\resources\config\mail.setting。配置发送邮件的邮箱。
-2. 在data.json配置用户，支持多个用户
+2. 在main\resources\data.json配置用户，支持多个用户
 3. 执行src\main\java\com\add\Main.java的main方法进行打卡。
 
 # 配置文件data.json说明
