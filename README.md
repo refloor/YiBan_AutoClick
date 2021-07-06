@@ -10,6 +10,9 @@
 4. 记录日志到click.log，方便排查问题
 5. 支持用Idea打成jar包后命令行直接运行(可以部署在服务器上定时任务)
 
+# 如何导入到Idea
+
+
 # 使用步骤
 
 1. 配置src\main\resources\config\mail.setting。配置发送邮件的邮箱。
