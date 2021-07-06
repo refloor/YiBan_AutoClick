@@ -1,12 +1,12 @@
 package com.add;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.io.resource.ClassPathResource;
+import cn.hutool.core.io.resource.ResourceUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.Header;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
-import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSON;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
@@ -15,7 +15,6 @@ import com.add.domain.ExceptionStatus;
 import com.add.domain.User;
 import com.add.exception.BaseException;
 import com.add.util.EmailUtil;
-import com.add.util.IdUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +22,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -31,13 +29,21 @@ import java.util.Map;
 
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
-    private static final File userFile = new File("data.json");
+    private static final File userFile;
+    private static final String userFileStr;
     private static final int MORNING_CLICK_CODE = 24;
     private static final int NOON_CLICK_CODE = 25;
     private static final String DEFAULT_LOCATION = "陕西省西安市 未央区 111县道 111县 靠近北城驾校";
-    private static final long DEFAULT_URL_WARN_DAY = 25;
+    private static final long DEFAULT_URL_WARN_DAY = 15;
 
     private static List<User> users;
+
+    static {
+        //初始化配置文件
+        ClassPathResource resource = new ClassPathResource("data.json");
+        userFile = new File(resource.getAbsolutePath());
+        userFileStr = resource.readUtf8Str();
+    }
 
     //初始化
     private static void init() {
@@ -49,8 +55,7 @@ public class Main {
     private static void loadUsers() {
         try {
             //加载配置文件
-            JSON jsonStr = JSONUtil.readJSON(userFile, Charset.forName("utf-8"));
-            String usersStr = JSONUtil.parseObj(jsonStr).getStr("users");
+            String usersStr = JSONUtil.parseObj(userFileStr).getStr("users");
             JSONArray objects = JSONUtil.parseArray(usersStr);
             users = objects.toList(User.class);
         } catch (Exception e) {
@@ -337,7 +342,6 @@ public class Main {
             //发送邮件
             if (user.getSendEmail() == true && user.getEmail() != null)
                 sendEmail(res.toString(), user);
-
         }
     }
 }

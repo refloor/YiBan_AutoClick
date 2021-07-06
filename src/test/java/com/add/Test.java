@@ -1,6 +1,7 @@
 package com.add;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.util.RandomUtil;
 
 
 import java.io.UnsupportedEncodingException;
@@ -11,13 +12,11 @@ public class Test {
 
     @org.junit.Test
     public void test1() throws UnsupportedEncodingException {
-        Date now = DateUtil.date();
-        String dateStr = "2021-05-01 22:33:23";
-        Date date = DateUtil.parse(dateStr);
-        System.out.println(now);
-        System.out.println(date);
-        long day = DateUtil.betweenDay(date, now, true);
-        System.out.println(day);
+        String s = RandomUtil.randomUUID();
+        String t = "68c8a272b458dd09b19972559c5bc13b";
+        System.out.println(t);
+        s = s.replace("-", "");
+        System.out.println(s);
 
     }
 }
