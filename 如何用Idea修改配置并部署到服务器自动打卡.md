@@ -20,6 +20,10 @@ open as project
 
 根据使用步骤配置发送邮件的邮箱、需要打卡的账户
 
+点击刷新按钮，然后等一会，使得自动下载依赖包
+
+![image-20210707092159403](https://gitee.com/xddadd/cloud-image/raw/master/image-20210707092159403.png)
+
 使用Maven进行编译打包
 
 ![img](https://gitee.com/xddadd/cloud-image/raw/master/A5E]_QDDZSD]ZTQQ8M4PEF9.png)
