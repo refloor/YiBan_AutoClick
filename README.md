@@ -20,7 +20,8 @@
 
 [从导入到打包到部署服务器自动打卡手把手](https://github.com/XddAdd/YiBan_AutoClick/blob/main/%E5%A6%82%E4%BD%95%E7%94%A8Idea%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1.md)
 
-
+# 目前存在的bug
+1. 打包部署到服务器会存在打卡位置提交是乱码的情况。(目前初步判断是部署的服务器的环境导致的问题)
 
 # 配置文件data.json说明
 
