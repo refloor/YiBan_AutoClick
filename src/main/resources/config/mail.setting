@@ -1,5 +1,5 @@
 # 发件人<发件邮箱>，“div”可以任意变更，<>内的地址必须唯一
-from = div<xddadd@qq.com>
+from = div<123456789@qq.com>
 # 密码,qq邮箱请配置SMTP授权码
 pass =
 # 使用SSL安全连接

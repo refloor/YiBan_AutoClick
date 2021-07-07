@@ -10,14 +10,17 @@
 4. 记录日志到click.log，方便排查问题
 5. 支持用Idea打成jar包后命令行直接运行(可以部署在服务器上定时任务)
 
-# 如何导入到Idea
-
-
 # 使用步骤
 
 1. 配置src\main\resources\config\mail.setting。配置发送邮件的邮箱。
 2. 在main\resources\data.json配置用户，支持多个用户
 3. 执行src\main\java\com\add\Main.java的main方法进行打卡。
+
+# 如何从修改配置到部署到服务器自动打卡
+
+[从导入到打包到部署服务器自动打卡手把手](https://github.com/XddAdd/YiBan_AutoClick/blob/main/%E5%A6%82%E4%BD%95%E7%94%A8Idea%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1.md)
+
+
 
 # 配置文件data.json说明
 
