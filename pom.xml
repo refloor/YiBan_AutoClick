@@ -35,7 +35,7 @@
                             <addClasspath>true</addClasspath>
                             <useUniqueVersions>false</useUniqueVersions>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.add.Main</mainClass>
+                            <mainClass>com.add.Main1</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
