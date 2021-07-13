@@ -78,12 +78,14 @@ crontab -e
 如：
 
 ```shell
-1 0 * * * java -jar /usr/my/target/yiban_auto_clock-1.0-SNAPSHOT.jar
+2 8,12 * * * java -jar /usr/my/target/yiban_auto_clock-1.0-SNAPSHOT.jar
 ```
 
 上述前面的一部分是设置定时的时间，后面一部分是执行的指令
 
-上面定时的时间表明每天的00：01执行一次后面的指令。
+上面定时的时间表明每天的08：02和12:02执行一次后面的指令。
+
+具体定时规则配置[点击查看](https://www.cnblogs.com/peida/archive/2013/01/08/2850483.html)
 
 4. 保存定时任务的文件即可
 
