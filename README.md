@@ -14,7 +14,7 @@
 
 1. 配置src\main\resources\config\mail.setting。配置发送邮件的邮箱。
 2. 在main\resources\data.json配置用户，支持多个用户
-3. 执行src\main\java\com\add\Main.java的main方法进行打卡。
+3. 执行src\main\java\com\add\Main1.java的main方法进行打卡。
 
 # 如何从修改配置到部署到服务器自动打卡
 
@@ -36,7 +36,7 @@
             "name": "tom", //name，发送邮件需要，跟打卡无关
             "id": "1", //id，日志/邮件需要，跟打卡无关
             "url": "http://yiban.sust.edu.cn/v4/public/index.php?key=Em7/z2oL422315QKqT8pGGgcnsyhgyNhBOsIQZWwPoKB9MOSBCyqRxsaphLn8Yr7LY2KdnXnONwu6K7TTcBF_f8bdGhiE=", //url，从易班复制
-            "location": "陕西省+西安市+未央区+111县道+111县+靠近北城驾校+&", //打卡地址，易班后台是根据地址进行区分地区，所以地区中间需要'+',末尾需要'&'，删掉+和&也行
+            "location": "陕西省 西安市 未央区 111县道 111县 靠近北城驾校 ", //打卡地址
             "morning_click": true, //是否需要晨检
             "noon_click": true, //是否需要午检
             "send_email":true //是否发送邮件
@@ -65,7 +65,7 @@ users是一个数组，只需要模仿着，copy一份即可。如下是两个�
             "name": "tom",
             "id": "1",
             "url": "http://yiban.sust.edu.cn/v4/public/index.php?key=Em7/z2oL422315QKqT8pGGgcnsyhgyNhBOsIQZWwPoKB9MOSBCyqRxsaphLn8Yr7LY2KdnXnONwu6K7TTcBF_f8bdGhiE=",
-            "location": "陕西省+西安市+未央区+111县道+111县+靠近北城驾校+&",
+            "location": "陕西省 西安市 未央区 111县道 111县 靠近北城驾校",
             "morning_click": true,
             "noon_click": true,
             "send_email":true
@@ -76,7 +76,7 @@ users是一个数组，只需要模仿着，copy一份即可。如下是两个�
             "name": "jerry",
             "id": "1",
             "url": "http://yiban.sust.edu.cn/v4/public/index.php?key=Em7/z2oL422315QKqT8pGGgcnsyhgyNhBOsIQZWwPoKB9MOSBCyqRxsaphLn8Yr7LY2KdnXnONwu6K7TTcBF_f8bdGhiE=",
-            "location": "陕西省+西安市+未央区+111县道+111县+靠近北城驾校+&",
+            "location": "陕西省 西安市 未央区 111县道 111县 靠近北城驾校",
             "morning_click": true,
             "noon_click": true,
             "send_email":true
